@@ -33,8 +33,8 @@ const loadDetail = (place_id) => {
         .done((data)=> resolve(data.result))
         .fail((error) => reject(error));
 
-    })
-}
+    });
+};
 
 // loading the data from the API call
     const loadPlaces = (dropdownType)=> {
@@ -47,11 +47,11 @@ const loadDetail = (place_id) => {
 
     //address is being passed in so no for loop is needed.
     const writeAddressToDom = (address) => {
-        let outputString = `<div>${address}</div>`
+        let outputString = `<div>${address}</div>`;
         $("#addresses").html(outputString);
 
 
-    }
+    };
 
     const writeNameToDom = (results) => {
         //for loop s need a variable to hold the empty string that it will loop through.
@@ -61,7 +61,7 @@ const loadDetail = (place_id) => {
             ouputString += `<a href="#"><div class="placeLink" id="${results[i].place_id}">${results[i].name}</div></a>`;
         }
         $("#input").append(ouputString);
-    }
+    };
 
 
 
